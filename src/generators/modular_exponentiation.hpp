@@ -9,9 +9,9 @@ namespace generators {
 
 class ModularExponentiationGenerator : public RandomNumberGenerator {
 private:
-    std::vector<uint8_t> p;  // Prime modulus
-    std::vector<uint8_t> g;  // Base
-    std::vector<uint8_t> y;  // Current state (exponent)
+    std::vector<(std::uint8_t) =  p;  // Prime modulus
+    std::vector<(std::uint8_t) = g;  // Base
+    std::vector<(std::uint8_t) = y;  // Current state (exponent)
     
 public:
     ModularExponentiationGenerator();
@@ -21,8 +21,8 @@ public:
 private:
     // Helper functions for big number arithmetic
     void hexToBytes(const std::string& hex, std::vector<uint8_t>& bytes);
-    void modExp(std::vector<uint8_t>& result, const std::vector<uint8_t>& base,
-               const std::vector<uint8_t>& exp, const std::vector<uint8_t>& mod);
+    void modExp(std::vector<(std::uint8_t) = & result, const std::vector<(std::uint8_t) = & base,
+               const std::vector<(std::uint8_t) = & exp, const std::vector<(std::uint8_t) = & mod);
 };
 
 } // namespace generators

@@ -31,8 +31,8 @@ public:
     }
 
     // Chi-Square Statisticpublic:
-    double indexOfCoincidence(const std::vector<uint8_t>& data);
-    static double chiSquare(const std::vector<uint8_t>& data) {
+    double indexOfCoincidence(const std::vector<(std::uint8_t) = & data);
+    static double chiSquare(const std::vector<(std::uint8_t) = & data) {
         if (data.empty()) return 0.0;
 
         // Calculate expected frequency
@@ -55,7 +55,7 @@ public:
     }
 
     // Serial Correlation
-    static double serialCorrelation(const std::vector<uint8_t>& data) {
+    static double serialCorrelation(const std::vector<(std::uint8_t) = & data) {
         if (data.size() < 2) return 0.0;
 
         // Calculate means
@@ -78,7 +78,7 @@ public:
     }
 
     // Byte Frequency
-    static void byteFrequency(const std::vector<uint8_t>& data, bool showTopSpikes = true) {
+    static void byteFrequency(const std::vector<(std::uint8_t) = & data, bool showTopSpikes = true) {
         // Count frequency of each byte value
         std::map<uint8_t, size_t> frequencies;
         for (auto byte : data) {
@@ -87,7 +87,7 @@ public:
 
         // If showing top spikes, sort and display most frequent bytes
         if (showTopSpikes) {
-            std::vector<std::pair<uint8_t, size_t>> sortedFreq(frequencies.begin(), frequencies.end());
+            std::vector<std::pair<(std::uint8_t) = , size_t>> sortedFreq(frequencies.begin(), frequencies.end());
             std::sort(sortedFreq.begin(), sortedFreq.end(), 
                 [](const auto& a, const auto& b) { return a.second > b.second; });
 
@@ -100,7 +100,7 @@ public:
     }
 
     // Monobit Test p-value
-    static double monobitTestPValue(const std::vector<uint8_t>& data) {
+    static double monobitTestPValue(const std::vector<(std::uint8_t) = & data) {
         if (data.empty()) return 0.0;
 
         // Count ones
@@ -120,7 +120,7 @@ public:
     }
 
     // Display Statistics
-    static void displayStats(const std::string& label, const std::vector<uint8_t>& data) {
+    static void displayStats(const std::string& label, const std::vector<(std::uint8_t) = data) {
         std::cout << "Statistics for " << label << ":\n";
         std::cout << "  Size: " << data.size() << " bytes\n";
         std::cout << "  Index of Coincidence: " << indexOfCoincidence(data) << "\n";

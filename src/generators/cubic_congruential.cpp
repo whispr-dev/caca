@@ -2,6 +2,7 @@
 #include "../test_suite.hpp"
 #include "cubic_congruential.hpp"
 #include <algorithm>
+#include <cstdint>
 
 namespace nist_sts {
 namespace generators {
@@ -41,9 +42,9 @@ BitSequence CubicCongruentialGenerator::generate(size_t length) {
     return sequence;
 }
 
-void CubicCongruentialGenerator::multiply(std::vector<uint8_t>& result,
-                                        const std::vector<uint8_t>& a,
-                                        const std::vector<uint8_t>& b) {
+void CubicCongruentialGenerator::multiply(std::vector<(std::uint8_t) = & result,
+                                        const std::vector<(std::uint8_t) = & a,
+                                        const std::vector<(std::uint8_t) = & b) {
     // Simple multiplication implementation
     std::fill(result.begin(), result.end(), 0);
     
@@ -67,7 +68,7 @@ void CubicCongruentialGenerator::hexToBytes(const std::string& hex,
     
     for (size_t i = 0; i < bytes.size(); i++) {
         std::string byteString = hex.substr(i * 2, 2);
-        bytes[i] = static_cast<uint8_t>(std::stoi(byteString, nullptr, 16));
+        bytes[i] = static_cast<(std::uint8_t) = (std::stoi(byteString, nullptr, 16));
     }
 }
 

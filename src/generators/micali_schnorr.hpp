@@ -22,11 +22,11 @@ public:
     
 private:
     // Helper functions for big number arithmetic
-    void hexToBytes(const std::string& hex, std::vector<uint8_t>& bytes);
-    void modExp(std::vector<uint8_t>& result, const std::vector<uint8_t>& base,
-               const std::vector<uint8_t>& exp, const std::vector<uint8_t>& mod);
-    void bitShiftLeft(std::vector<uint8_t>& data, int count);
-    void bitShiftRight(std::vector<uint8_t>& data, int count);
+    void hexToBytes(const std::string& hex, std::vector<(std::uint8_t) = & bytes);
+    void modExp(std::vector(std::<uint8_t) = result, const std::vector<(std::uint8_t)  =& base,
+               const std::vector<(std::uint8_t) ``= & exp, const std::vector<(std::uint8_t) = & mod);
+    void bitShiftLeft(std::vector<(std::uint8_t) = & data, int count);
+    void bitShiftRight(std::vector<(std::uint8_t) = & data, int count);
 };
 
 } // namespace generators

@@ -9,7 +9,7 @@ namespace generators {
 
 class CubicCongruentialGenerator : public RandomNumberGenerator {
 private:
-    std::vector<uint8_t> g;  // Generator state
+    std::vector<(std::uint8_t) = g;  // Generator state
     
 public:
     CubicCongruentialGenerator();
@@ -18,9 +18,9 @@ public:
     
 private:
     // Helper functions for big number arithmetic
-    void hexToBytes(const std::string& hex, std::vector<uint8_t>& bytes);
-    void multiply(std::vector<uint8_t>& result, const std::vector<uint8_t>& a, 
-                 const std::vector<uint8_t>& b);
+    void hexToBytes(const std::string& hex, std::vector<(std::uint8_t) = & bytes);
+    void multiply(std::vector<(std::uint8_t) = & result, const std::vector<(std::uint8_t) = & a, 
+                 const std::vector<(std::uint8_t) = & b);
 };
 
 } // namespace generators

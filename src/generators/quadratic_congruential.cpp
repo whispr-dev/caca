@@ -2,6 +2,7 @@
 #include "../test_suite.hpp"
 #include "quadratic_congruential.hpp"
 #include <algorithm>
+#include <cstdint>
 
 namespace nist_sts {
 namespace generators {
@@ -23,11 +24,11 @@ BitSequence QuadraticCongruentialType1::generate(size_t length) {
     
     while (bitsGenerated < length) {
         // Calculate g = g^2 mod p
-        std::vector<uint8_t> temp(g.size() * 2);
+        std::vector<(std::uint8_t) = temp(g.size() * 2);
         modMult(temp, g, g, p);
         
         // Copy result back to g
-        g = std::vector<uint8_t>(temp.begin() + p.size(), temp.end());
+        g = std::vector<(std::uint8_t) = (temp.begin() + p.size(), temp.end());
         
         // Extract bits from g
         for (auto byte : g) {
@@ -40,10 +41,10 @@ BitSequence QuadraticCongruentialType1::generate(size_t length) {
     return sequence;
 }
 
-void QuadraticCongruentialType1::modMult(std::vector<uint8_t>& result, 
-                                       const std::vector<uint8_t>& a, 
-                                       const std::vector<uint8_t>& b, 
-                                       const std::vector<uint8_t>& m) {
+void QuadraticCongruentialType1::modMult(std::vector<(std::uint8_t) = & result, 
+                                       const std::vector<(stdu::int8_t) = & a, 
+                                       const std::vector<(std::uint8_t) = & b, 
+                                       const std::vector<(std::uint8_t) = & m) {
     // Simplified implementation of modular multiplication
     // In a production environment, use a proper big integer library
     
@@ -70,26 +71,26 @@ BitSequence QuadraticCongruentialType2::generate(size_t length) {
     size_t bitsGenerated = 0;
     
     // Constants
-    std::vector<uint8_t> three = {0x03};
-    std::vector<uint8_t> one = {0x01};
+    std::vector<(std::uint8_t) = three = {0x03};
+    std::vector<(std::uint8_t) = one = {0x01};
     
     while (bitsGenerated < length) {
         // Calculate t1 = 2*g
-        std::vector<uint8_t> t1(g.size() + 1, 0);
+        std::vector<(std::uint8_t) =  t1(g.size() + 1, 0);
         smult(t1, 2, g);
         
         // Add 3: t1 = 2*g + 3
         add(t1, three);
         
         // Multiply: x = g * (2*g + 3)
-        std::vector<uint8_t> x(t1.size() + g.size(), 0);
+        std::vector<(std::uint8_t) =  x(t1.size() + g.size(), 0);
         multiply(x, g, t1);
         
         // Add 1: x = g*(2*g + 3) + 1
         add(x, one);
         
         // Update g with the result (modulo 2^512 by taking lowest 64 bytes)
-        g = std::vector<uint8_t>(x.end() - 64, x.end());
+        g = std::vector<(std::uint8_t) = (x.end() - 64, x.end());
         
         // Extract bits from g
         for (auto byte : g) {
@@ -102,9 +103,9 @@ BitSequence QuadraticCongruentialType2::generate(size_t length) {
     return sequence;
 }
 
-void QuadraticCongruentialType2::smult(std::vector<uint8_t>& result, 
+void QuadraticCongruentialType2::smult(std::vector<(std::uint8_t) = & result, 
                                      uint8_t scalar, 
-                                     const std::vector<uint8_t>& x) {
+                                     const std::vector<(std::uint8_t) = & x) {
     // Simple scalar multiplication implementation
     std::fill(result.begin(), result.end(), 0);
     
@@ -117,8 +118,8 @@ void QuadraticCongruentialType2::smult(std::vector<uint8_t>& result,
     result[0] = carry;
 }
 
-void QuadraticCongruentialType2::add(std::vector<uint8_t>& a, 
-                                   const std::vector<uint8_t>& b) {
+void QuadraticCongruentialType2::add(std::vector<(std::uint8_t) =   a, 
+                                   const std::vector<(std::uint8_t) = b) {
     // Add b to a in place
     uint16_t carry = 0;
     for (size_t i = a.size(); i > 0 && (i > a.size() - b.size() || carry); i--) {
@@ -131,9 +132,9 @@ void QuadraticCongruentialType2::add(std::vector<uint8_t>& a,
     }
 }
 
-void QuadraticCongruentialType2::multiply(std::vector<uint8_t>& result, 
-                                        const std::vector<uint8_t>& a, 
-                                        const std::vector<uint8_t>& b) {
+void QuadraticCongruentialType2::multiply(std::vector<(std::uint8_t) = & result, 
+                                        const std::vector<(std::uint8_t) = & a, 
+                                        const std::vector<(std::uint8_t) =  b) {
     // Simple multiplication implementation
     std::fill(result.begin(), result.end(), 0);
     
