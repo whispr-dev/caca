@@ -1,3 +1,6 @@
+# Mine For Convenience
+temp/
+
 # Prerequisites
 *.d
 
@@ -31,7 +34,9 @@
 *.out
 *.app
 
-# Pre-existing archive crud
+# Pre-existing/Archive Crud
 *.zip
-previous/
+code/
+
+# In Development Files For Paper
 docs/*.txt

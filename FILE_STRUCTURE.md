@@ -1,83 +1,40 @@
-cascade/
-├── .git/
+caca/
+├── .git/ [igniored]
+├── .vscode/[ignored]
+├── ca/
+│    └── cellular_automata.cpp
 ├── build/
+├── code/
+├── core/
+│    └── error_handling.cpp
 ├── docs/
-├── previous/ [ignore]
-├── src/
-│   ├── generators/
-│   │   ├── bbs.cpp
-│   │   ├── bbs.hpp
-│   │   ├── cubic_congruential.cpp
-│   │   ├── cubic_congruential.hpp
-│   │   ├── lcg.cpp
-│   │   ├── lcg.hpp
-│   │   ├── micali_schnorr.cpp
-│   │   ├── micali_schnorr.hpp
-│   │   ├── modular_exponentiation.cpp
-│   │   ├── modular_exponentiation.hpp
-│   │   ├── quadratic_congruential.cpp
-│   │   ├── quadratic_congruential.hpp
-│   │   ├── sha1.cpp
-│   │   ├── sha1.hpp
-│   │   ├── xor_generator.cpp
-│   │   └── xor_generator.hpp
-│   ├── nist_sts/
-│   │   ├── tests/
-│   │   │   ├── approximate_entropy_test.cpp
-│   │   │   ├── approximate_entropy_test.hpp
-│   │   │   ├── block_frequency_test.cpp
-│   │   │   ├── block_frequency_test.hpp
-│   │   │   ├── cumulative_sums_test.cpp
-│   │   │   ├── cumulative_sums_test.hpp
-│   │   │   ├── dft_test.cpp
-│   │   │   ├── dft_test.hpp
-│   │   │   ├── frequency_test.cpp
-│   │   │   ├── frequency_test.hpp
-│   │   │   ├── linear_complexity_test.cpp
-│   │   │   ├── linear_complexity_test.hpp
-│   │   │   ├── longest_run_test.cpp
-│   │   │   ├── longest_run_test.hpp
-│   │   │   ├── non_overlapping_template_test.cpp
-│   │   │   ├── non_overlapping_template_test.hpp
-│   │   │   ├── overlapping_template_test.cpp
-│   │   │   ├── overlapping_template_test.hpp
-│   │   │   ├── random_excursions_test.cpp
-│   │   │   ├── random_excursions_test.hpp
-│   │   │   ├── random_excursions_variant_test.cpp
-│   │   │   ├── random_excursions_variant_test.hpp
-│   │   │   ├── rank_test.cpp
-│   │   │   ├── rank_test.hpp
-│   │   │   ├── runs_test.cpp
-│   │   │   ├── runs_test.hpp
-│   │   │   ├── serial_test.cpp
-│   │   │   ├── serial_test.hpp
-│   │   │   ├── universal_test.cpp
-│   │   │   └── universal_test.hpp
-│   │   ├── generator_factory.cpp
-│   │   ├── generator_factory.hpp
-│   │   ├── test_suite.cpp
-│   │   └── test_suite.hpp
-│   ├── bitsequence.cpp
-│   ├── bitsequence.hpp
-│   ├── ca_analyzer.cpp
-│   ├── ca_analyzer.hpp
-│   ├── ca_nist_analyzer.hpp
-│   ├── common.cpp
-│   ├── common.hpp
-│   ├── core_class_structure.cpp
-│   ├── frequency.cpp
-│   ├── frequency.hpp
-│   ├── main.cpp
-│   ├── math_functions.cpp
-│   ├── math_functions.hpp
-│   ├── nist_sts.hpp
-│   ├── nist_tests.hpp
-│   ├── random_number_generator.hpp
-│   ├── stat_analyzer.hpp
-│   ├── statistical_test.hpp
-│   ├── test_suite.cpp
-│   └── test_suite.hpp
-├── test_data/
+├── include/
+│	 ├── ca/
+│	 │    └── cellular_automata.hpp
+│	 ├── core/
+│	 │    ├── bitsequence.hpp
+│	 │    └── error_handling.hpp
+│	 ├── monitoring/
+│	 │    └── progress_monitor.hpp
+│	 ├── simd/
+│	 │    ├── cpu_features.hpp
+│	 │    └── dispatcher.hpp
+│	 └── tests/
+│      	      ├── nist_tests.hpp
+│	      └── statistical_tests.hpp
+│
+├── monitoring/
+│    └── progress_monitor.cpp
+├── simd/
+│    ├── cpu_features.cpp
+│    └── dispatcher.cpp
+│
+├── temp/ [ignored]
+├── tests/
+│    ├── nist_tests.cpp
+│    └── statistical_tests.cpp
+│
+├── testing/
 │   ├── dataset_gen/
 │   │   ├── caca_dataset_gen.txt
 │   │   ├── 1KBr_esearch_paper.bin
@@ -90,6 +47,7 @@ cascade/
 │   │   ├── ncpt_flawed_prng.py
 │   │   ├── ncpt_shift_mix.py
 │   │   └── ncpt_XOR_short.py
+│   │
 │   ├── 1KB_paper_aes_cbc_iv.bin
 │   ├── 1KB_paper_aes_ctr.bin
 │   ├── 1KB_paper_caesar.bin
@@ -126,11 +84,12 @@ cascade/
 │   ├── bash_history_ceasar.bin
 │   ├── bash_history_flawedprng.bin
 │   └── bash_history_shiftmx.bin
-├── sts-2_1_2.zip [ignore]
-├── .gitattributes
-├── .gitignore
+│
+├── sts-2_1_2.zip [ignored]
+├── .gitattributes [ignored]
+├── .gitignore [ignored]
 ├── CMakeLists.txt
-├── FILE_STRUCTURE.md
+├── FILE_STRUCTURE.md [this file]
 ├── LICENSE
 └── README.md
 

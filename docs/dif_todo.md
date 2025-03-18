@@ -1,0 +1,11 @@
+- C++ fats chi sqr
+- C++ fast prngs
+- C++ fast crypto rngs
+- open~CL and SIMD inc full AVX-512 as welll as SSE2, AVX, AVX2 and revert fallback scalar, NEONoptional if being complete.
+- check if there are other forms of GFX accel. than openCL?
+- aks rtc about json oarser - can it be a boost to my timings via better dataset thruput overall etc. i.e. does it boost all raw data operational overheads?
+- my parser? ideas at least...
+- if GFX is only openCL then perhaps make use of GFX for tensors or as pytorch/ruby's etc. and do ai processing?
+
+- [yes with a space!] SWARM!!!
+- also, swarm communicate hence learn and hive mind...
